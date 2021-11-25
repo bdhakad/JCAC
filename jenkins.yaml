@@ -1,0 +1,94 @@
+jenkins:
+  agentProtocols:
+  - "JNLP4-connect"
+  - "Ping"
+  authorizationStrategy:
+    globalMatrix:
+      permissions:
+      - "Overall/Administer:Brajesh.Dhakad"
+      - "Overall/Administer:Jonthan.Osborne"
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  disabledAdministrativeMonitors:
+  - "jenkins.diagnostics.ControllerExecutorsNoAgents"
+  - "jenkins.security.QueueItemAuthenticatorMonitor"
+  labelAtoms:
+  - name: "master"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  numExecutors: 2
+  primaryView:
+    all:
+      name: "all"
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: true
+  scmCheckoutRetryCount: 0
+  securityRealm:
+    gitLab:
+      clientID: "d7b72fc0e7a63e4e0ed141f3fded5ee2d80ba456d94add0c808bc3c49d2c6f87"
+      clientSecret: "32907a5cdf8dc001a2695cee290de9c80387558826aee1b6d7eaa5829431eb74"
+      gitlabApiUri: "https://us-south.git.cloud.ibm.com"
+      gitlabWebUri: "https://us-south.git.cloud.ibm.com"
+  slaveAgentPort: 50000
+  updateCenter:
+    sites:
+    - id: "default"
+      url: "https://updates.jenkins.io/update-center.json"
+  views:
+  - all:
+      name: "all"
+  viewsTabBar: "standard"
+security:
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  sSHD:
+    port: -1
+unclassified:
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  fingerprints:
+    fingerprintCleanupDisabled: false
+    storage: "file"
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "https://test-jenkins-auth.aicoe-ops-cluster-3850e9e5af2b203d563ea923acbee64e-0000.eu-gb.containers.appdomain.cloud/github-webhook/"
+  gitSCM:
+    addGitTagAction: false
+    allowSecondFetch: false
+    createAccountBasedOnEmail: false
+    disableGitToolChooser: false
+    hideCredentials: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  junitTestResultStorage:
+    storage: "file"
+  location:
+    adminAddress: "address not configured yet <nobody@nowhere>"
+    url: "https://test-jenkins-auth.aicoe-ops-cluster-3850e9e5af2b203d563ea923acbee64e-0000.eu-gb.containers.appdomain.cloud/"
+  mailer:
+    charset: "UTF-8"
+    useSsl: false
+    useTls: false
+  pollSCM:
+    pollingThreadCount: 10
+  timestamper:
+    allPipelines: false
+    elapsedTimeFormat: "'<b>'HH:mm:ss.S'</b> '"
+    systemTimeFormat: "'<b>'HH:mm:ss'</b> '"
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
+  mavenGlobalConfig:
+    globalSettingsProvider: "standard"
+    settingsProvider: "standard"
